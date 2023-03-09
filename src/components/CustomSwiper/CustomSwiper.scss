@@ -1,0 +1,224 @@
+@import "../../vendor/colorsSettings";
+@import '../../vendor/fontsSettings';
+
+@mixin font-settings($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-vertical {
+  height: calc(100vh - 212px - 101px - 34px);
+}
+
+.sliderCrew-horizontal {
+  @media screen and (max-width: 1070px) {
+    height: calc(100vh - 136px - 100px - 24px);
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.swiper-pagination {
+  position: absolute;
+  display: flex;
+  height: fit-content;
+
+  @media screen and (max-width: 1070px) {
+    gap: 15px;
+    justify-content: center;
+  }
+}
+
+.sliderPlanet-bullet {
+  @include font-settings(16px, 19px);
+  font-family: $font-family-BarlowCondensed;
+  letter-spacing: 2.7px;
+  width: fit-content;
+  height: 19px;
+  color: $white-100;
+  border-radius: 0;
+  opacity: 1;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: solid 3px rgba(255, 255, 255, 0);
+  transition: border-bottom 0.2s linear;
+
+  &:hover {
+    border-bottom: solid 3px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 570px) {
+    @include font-settings(14px, 17px);
+    letter-spacing: 2.3625px;
+    padding-bottom: 8px;
+  }
+}
+
+.sliderPlanet-bullet-active {
+  padding-bottom: 12px;
+  border-bottom: solid 3px $white;
+  background-color: inherit;
+  color: $white;
+
+  &:hover {
+    border-bottom: solid 3px $white;
+  }
+
+  @media screen and (max-width: 570px) {
+    padding-bottom: 8px;
+  }
+}
+
+.sliderCrew-bullet  {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $white;
+  opacity: 0.17;
+  margin: 0 24px 0 0;
+  transition: opacity 0.2s linear;
+
+  &:hover {
+    opacity: 0.5;
+    padding: 0;
+    border-bottom: 0;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1070px) {
+    width: 10px;
+    height: 10px;
+    margin: 0;
+  }
+}
+
+.sliderCrew-bullet-active {
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  padding: 0;
+  border-bottom: 0;
+
+  @media screen and (max-width: 1070px) {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.sliderTechno-bullet-vertical {
+  flex-direction: column;
+  width: fit-content;
+  gap: 32px;
+}
+
+.sliderTechno-bullet {
+  @include font-settings(32px, 37px);
+  font-family: $font-family-Bellefair;
+  color: $white;
+  border: solid 1px rgba(255, 255, 255, 0.25);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border 0.2s linear;
+
+  &:hover {
+    border: solid 1px $white;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 1070px) {
+    @include font-settings(24px, 28px);
+    width: 60px;
+    height: 60px;
+  }
+
+  @media screen and (max-width: 570px) {
+    @include font-settings(16px, 18px);
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.sliderTechno-bullet-active {
+  border: solid 1px inherit;
+  background-color: $white;
+  color: $black;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .sliderPlanet-bullet,
+.sliderPlanet-horizontal.swiper-pagination-bullets .sliderPlanet-bullet {
+  margin: 0 35px 0 0;
+
+  @media screen and (max-width: 1070px) {
+    margin: 0;
+  }
+}
+
+.swiper-pagination-bullets.sliderPlanet-horizontal {
+  width: fit-content;
+  top: 64px;
+  left: 666px;
+
+  @media screen and (max-width: 1439px) {
+    left: calc((100vw / 2) + 60px);
+  }
+
+  @media screen and (max-width: 1220px) {
+    left: calc((100vw / 2) + 6px);
+  }
+
+  @media screen and (max-width: 1070px) {
+    top: 413px;
+    left: calc((100vw / 2) - 38.5px - (288.8px / 2));
+    gap: 35px;
+  }
+
+  @media screen and (max-width: 570px) {
+    top: 228px;
+    left: calc((100vw / 2) - 24px - (265.88px / 2));
+  }
+}
+
+.swiper-pagination-bullets.sliderCrew-bullet-horizontal {
+  top: 593px;
+  left: 2px;
+
+  @media screen and (max-width: 1070px) {
+    top: 306px;
+  }
+}
+
+.sliderCrew-bullet-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 24px 0 0;
+}
+
+.swiper-vertical>.swiper-pagination-bullets {
+  top: 289px;
+  left: 0;
+}
+
+.swiper-pagination-bullets.sliderTechno-bullet-horizontal {
+  @media screen and (max-width: 1070px) {
+    bottom: 281px;
+    left: 0;
+  }
+
+  @media screen and (max-width: 570px) {
+    bottom: 271px;
+    left: 0;
+  }
+}

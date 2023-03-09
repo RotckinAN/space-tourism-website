@@ -1,0 +1,89 @@
+@import "../../vendor/fontsSettings";
+@import "../../vendor/colorsSettings";
+@import "../../vendor/imageSettings";
+
+@mixin font-settings($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+.sideBar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 10;
+
+  &_opened {
+    visibility: visible;
+  }
+}
+
+.sideBar__navigateContainer {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  transition: visibility 0.3s linear,opacity 0.3s linear;
+  padding: 30px 0 30px 30px;
+  height: 100vh;
+  width: 254px;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 15;
+
+  &_opened {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.sideBar__buttonClose {
+  position: absolute;
+  @include imageSettings('../../images/shared/icon-close.svg', 19px, 19px);
+  background-size: contain;
+  background-color: inherit;
+  border: none;
+  top: 34px;
+  right: 26.5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.sideBar__link {
+  @include font-settings(16px, 19px);
+  font-family: $font-family-BarlowCondensed;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2.7px;
+  color: $white;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+
+  span {
+    font-weight: 700;
+    padding-right: 12px;
+  }
+
+  &:hover {
+    border-right: solid 4px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.sideBar__linkContainer {
+  padding: 88px 0 30px 2px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

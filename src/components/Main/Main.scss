@@ -1,0 +1,178 @@
+@import "../../vendor/fontsSettings";
+@import "../../vendor/colorsSettings";
+
+%buttonStyles {
+  border-radius: 50%;
+  background: $white;
+}
+
+@mixin font-settings($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+.main {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  background-image: url(../../images/home/background-home-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: inherit;
+  background-position-x: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 387px 165px 0 165px;
+
+  @media screen and (max-width: 1220px) {
+    padding: 387px 100px 0 100px;
+  }
+  
+  @media screen and (max-width: 1070px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 156px;
+    justify-content: flex-start;
+    padding: 200px 150px 0 150px;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-image: url(../../images/home/background-home-tablet.jpg);
+    min-height: 1000px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 112px 24px 0 24px;
+    gap: 81px;
+    min-height: 667px;
+  }
+
+  @media screen and (max-width: 375px) {
+    background-image: url(../../images/home/background-home-mobile.jpg);
+  }
+}
+
+.main__titleContainer {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  gap: 24px;
+
+  @media screen and (max-width: 1070px) {
+    align-items: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    gap: 16px;
+    width: 100%;
+    min-width: 320px;
+  }
+}
+
+.main__title {
+  @include font-settings(28px, 34px);
+  font-family: $font-family-BarlowCondensed;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 4.725px;
+  color: $white-100;
+
+  @media screen and (max-width: 1070px) {
+    @include font-settings(20px, 24px);
+    letter-spacing: 3.375px;
+  }
+
+  @media screen and (max-width: 500px) {
+    @include font-settings(16px, 19px);
+    letter-spacing: 2.7px;
+  }
+}
+
+.main__subTitle {
+  @include font-settings(150px, 172px);
+  font-family: $font-family-Bellefair;
+  font-weight: 400;
+  font-style: normal;
+  color: $white;
+
+  @media screen and (max-width: 1070px) {
+    @include font-settings(150px, 150px);
+  }
+
+  @media screen and (max-width: 500px) {
+    @include font-settings(80px, 100px);
+  }
+}
+
+.main__paragraph {
+  @include font-settings(18px, 32px);
+  font-family: $font-family-Barlow;
+  font-weight: 400;
+  font-style: normal;
+  color: $white-100;
+
+  @media screen and (max-width: 1070px) {
+    @include font-settings(16px, 28px);
+    text-align: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    @include font-settings(15px, 25px);
+  }
+}
+
+.main__linkButton {
+  @extend %buttonStyles;
+  @include font-settings(32px, 37px);
+  font-family: $font-family-Bellefair;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 274px;
+  height: 274px;
+  border: none;
+  font-style: normal;
+  letter-spacing: 2px;
+  color: $black;
+  text-decoration: none;
+  position: relative;
+
+  &:hover::before {
+    @extend %buttonStyles;
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    top: -(450px - 274px) / 2;
+    left: -(450px - 274px) / 2;
+    opacity: 0.1;
+    z-index: 10;
+  }
+
+  @media screen and (max-width: 1070px) {
+    width: 242px;
+    height: 242px;
+
+    &:hover::before {
+      width: 400px;
+      height: 400px;
+      top: -(400px - 242px) / 2;
+      left: -(400px - 242px) / 2;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    @include font-settings(20px, 23px);
+    width: 150px;
+    height: 150px;
+
+    &:hover::before {
+      width: 246px;
+      height: 246px;
+      top: -(246px - 150px) / 2;
+      left: -(246px - 150px) / 2;
+    }
+  }
+}

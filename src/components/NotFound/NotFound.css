@@ -1,0 +1,63 @@
+/* colors */ /* typography */
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.notFound__title {
+  font-size: 150px;
+  line-height: 150px;
+  font-family: "Bellefair", sans-serif;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 570px) {
+  .notFound__title {
+    font-size: 90px;
+    line-height: 90px;
+  }
+}
+
+.notFound__subTitle {
+  font-size: 24px;
+  line-height: 28px;
+  font-family: "Barlow", sans-serif;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 570px) {
+  .notFound__subTitle {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.notFound__button {
+  background-color: #FFFFFF;
+  font-size: 20px;
+  line-height: 22px;
+  font-family: "Barlow", sans-serif;
+  color: #0B0D17;
+  margin-top: 30px;
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  opacity: 1;
+  transition: opacity 0.25s linear;
+}
+.notFound__button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+@media screen and (max-width: 570px) {
+  .notFound__button {
+    font-size: 16px;
+    line-height: 18px;
+    width: 70px;
+    height: 35px;
+  }
+}
+
+/*# sourceMappingURL=NotFound.css.map */

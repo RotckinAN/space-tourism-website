@@ -1,0 +1,78 @@
+@import "../../vendor/colorsSettings";
+@import '../../vendor/fontsSettings';
+
+@mixin font-settings($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+.destination {
+  padding: 212px 163px 118px 166.5px;
+  max-width: 1440px;
+  width: 100%;
+  box-sizing: border-box;
+  background-image: url(../../images/destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: inherit;
+  background-position-x: center;
+
+  @media screen and (max-width: 1439px) {
+    padding: 212px 50px 118px 50px;
+  }
+
+  @media screen and (max-width: 1070px) {
+    padding: 136px 38.5px 101px 38.5px;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-image: url(../../images/destination/background-destination-tablet.jpg);
+  }
+
+  @media screen and (max-width: 570px) {
+    padding: 88px 24px 58px 24px;
+  }
+
+  @media screen and (max-width: 375px) {
+    background-image: url(../../images/destination/background-destination-mobile.jpg);
+  }
+}
+
+.destination__title {
+  @include font-settings(28px, 34px);
+  font-family: $font-family-BarlowCondensed;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 4.725px;
+  color: $white;
+  text-transform: uppercase;
+
+  span {
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    padding-right: 24px;
+  }
+
+  @media screen and (max-width: 1439px) {
+    padding-left: 116.5px;
+  }
+
+  @media screen and (max-width: 1070px) {
+    @include font-settings(20px, 24px);
+    letter-spacing: 3.375px;
+    padding-left: 0;
+
+    span {
+      padding-right: 19px;
+    }
+  }
+
+  @media screen and (max-width: 570px) {
+    @include font-settings(16px, 19px);
+    letter-spacing: 2.7px;
+    text-align: center;
+
+    span {
+      padding-right: 18px;
+    }
+  }
+}

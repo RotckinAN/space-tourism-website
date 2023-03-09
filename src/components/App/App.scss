@@ -1,0 +1,36 @@
+@import "../../vendor/colorsSettings";
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+//html,
+//body {
+//  position: relative;
+//  height: 100%;
+//}
+
+.page {
+  font-family: 'Bellefair', sans-serif;
+  font-weight: 400;
+  min-width: 320px;
+  min-height: 100vh;
+  //height: 100%;
+  margin: 0 auto;
+  display: flex;
+  box-sizing: border-box;
+  background-color: $black;
+  flex-direction: column;
+  align-items: center;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  position: relative;
+}

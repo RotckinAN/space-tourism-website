@@ -1,0 +1,65 @@
+//@import "../../vendor/colorsSettings";
+//@import '../../vendor/fontsSettings';
+//
+//@mixin font-settings($fontSize, $lineHeight) {
+//  font-size: $fontSize;
+//  line-height: $lineHeight;
+//}
+//
+//.swiper {
+//  width: 100%;
+//  height: 100%;
+//  position: relative;
+//}
+//
+//.swiper-vertical {
+//  height: calc(100vh - 212px - 101px - 34px);
+//}
+//
+//.swiper-slide {
+//  display: flex;
+//  justify-content: center;
+//  align-items: flex-start;
+//}
+//
+//.swiper-pagination {
+//  position: absolute;
+//  display: flex;
+//  height: fit-content;
+//}
+//
+//.sliderTechno-bullet-vertical {
+//  flex-direction: column;
+//  width: fit-content;
+//  gap: 32px;
+//}
+//
+//.sliderTechno-bullet {
+//  @include font-settings(32px, 37px);
+//  font-family: $font-family-Bellefair;
+//  color: $white;
+//  border: solid 1px rgba(255, 255, 255, 0.25);
+//  width: 80px;
+//  height: 80px;
+//  border-radius: 50%;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  transition: border 0.2s linear;
+//
+//  &:hover {
+//    border: solid 1px $white;
+//    cursor: pointer;
+//  }
+//}
+//
+//.sliderTechno-bullet-active {
+//  border: solid 1px inherit;
+//  background-color: $white;
+//  color: $black;
+//}
+//
+//.swiper-vertical>.swiper-pagination-bullets {
+//  top: 289px;
+//  left: 0;
+//}

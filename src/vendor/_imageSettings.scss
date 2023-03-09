@@ -1,0 +1,6 @@
+@mixin imageSettings($imageLink, $width, $height) {
+  background-image: url($imageLink);
+  width: $width;
+  height: $height;
+  background-repeat: no-repeat;
+}

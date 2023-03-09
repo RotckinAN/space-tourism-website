@@ -1,0 +1,79 @@
+/* colors */ /* typography */
+.technology {
+  padding: 212px 0 101px 166.5px;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  min-height: 710px;
+  box-sizing: border-box;
+  background-image: url(../../images/technology/background-technology-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: inherit;
+  background-position-x: center;
+}
+@media screen and (max-width: 1439px) {
+  .technology {
+    padding: 212px 0 101px 50px;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .technology {
+    padding: 136px 0 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .technology {
+    background-image: url(../../images/technology/background-technology-tablet.jpg);
+  }
+}
+@media screen and (max-width: 570px) {
+  .technology {
+    padding: 88px 0 58px 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  .technology {
+    background-image: url(../../images/technology/background-technology-mobile.jpg);
+  }
+}
+
+.technology__title {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 4.725px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.technology__title span {
+  mix-blend-mode: normal;
+  opacity: 0.25;
+  padding-right: 24px;
+}
+@media screen and (max-width: 1070px) {
+  .technology__title {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+    padding-left: 38.5px;
+  }
+  .technology__title span {
+    padding-right: 19px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .technology__title {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    text-align: center;
+  }
+  .technology__title span {
+    padding-right: 0;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=Technology.css.map */

@@ -1,0 +1,60 @@
+@import "../../vendor/colorsSettings";
+@import '../../vendor/fontsSettings';
+
+@mixin font-settings($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.notFound__title {
+  @include font-settings(150px, 150px);
+  font-family: $font-family-Bellefair;
+  color: $white;
+
+  @media screen and (max-width: 570px){
+    @include font-settings(90px, 90px);
+  }
+}
+
+.notFound__subTitle {
+  @include font-settings(24px, 28px);
+  font-family: $font-family-Barlow;
+  color: $white;
+
+  @media screen and (max-width: 570px){
+    @include font-settings(20px, 22px);
+  }
+}
+
+.notFound__button {
+  background-color: $white;
+  @include font-settings(20px, 22px);
+  font-family: $font-family-Barlow;
+  color: $black;
+  margin-top: 30px;
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  opacity: 1;
+  transition: opacity 0.25s linear;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  @media screen and (max-width: 570px){
+    @include font-settings(16px, 18px);
+    width: 70px;
+    height: 35px;
+  }
+}

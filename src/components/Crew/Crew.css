@@ -1,0 +1,87 @@
+/* colors */ /* typography */
+.crew {
+  padding: 212px 137px 20px 165.5px;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 710px;
+  box-sizing: border-box;
+  background-image: url(../../images/crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: inherit;
+  background-position-x: center;
+  position: relative;
+}
+@media screen and (max-width: 1439px) {
+  .crew {
+    padding: 212px 50px 118px 50px;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .crew {
+    padding: 136px 38.5px 101px 38.5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .crew {
+    background-image: none;
+  }
+}
+@media screen and (max-width: 570px) {
+  .crew {
+    padding: 88px 24px 58px 24px;
+  }
+}
+
+.crew__title {
+  font-size: 28px;
+  line-height: 34px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 4.725px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  position: absolute;
+  top: 212px;
+}
+.crew__title span {
+  mix-blend-mode: normal;
+  opacity: 0.25;
+  padding-right: 24px;
+}
+@media screen and (max-width: 1439px) {
+  .crew__title {
+    left: calc((100vw - 1126px) / 2);
+  }
+}
+@media screen and (max-width: 1230px) {
+  .crew__title {
+    left: 50px;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .crew__title {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+    left: 38.5px;
+    top: 136px;
+  }
+  .crew__title span {
+    padding-right: 19px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .crew__title {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+    left: calc(50vw - 24px - 87.775px);
+    top: 88px;
+  }
+  .crew__title span {
+    padding-right: 18px;
+  }
+}
+
+/*# sourceMappingURL=Crew.css.map */
