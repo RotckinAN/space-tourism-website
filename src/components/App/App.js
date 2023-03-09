@@ -49,7 +49,7 @@ function App() {
                />
             </Route>
             <Route
-               path="*"
+               path="/*"
                element={<NotFound notFoundPageContent={notFoundPageContent} />}
             />
          </Routes>
