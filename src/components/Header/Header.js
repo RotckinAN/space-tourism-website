@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import SideBar from '../SideBar/SideBar';
 import { navLink } from '../../utils/content';
 
@@ -21,7 +21,9 @@ const Header = () => {
 
    return (
       <header className="header">
-         <div className="header__logo"></div>
+         <Link to={'/'} className="header__linkLogo">
+            <div className="header__logo"></div>
+         </Link>
          <nav className="header__navigate">
             <ul className="header__navigateList">
                {navLink.map((link) => {

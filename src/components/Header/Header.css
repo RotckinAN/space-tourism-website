@@ -28,17 +28,33 @@
   }
 }
 
+.header__linkLogo {
+  margin: 24px 64px 24px 55px;
+  border-radius: 50%;
+}
+@media screen and (max-width: 1070px) {
+  .header__linkLogo {
+    margin: 24px 24px 24px 39px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .header__linkLogo {
+    margin-left: 25px;
+  }
+}
+
 .header__logo {
   background-image: url("../../images/shared/logo.svg");
   width: 48px;
   height: 48px;
   background-repeat: no-repeat;
   background-size: contain;
-  margin: 24px 64px 24px 55px;
+  border-radius: 50%;
 }
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 570px) {
   .header__logo {
-    margin: 24px 24px 24px 39px;
+    width: 40px;
+    height: 40px;
   }
 }
 
