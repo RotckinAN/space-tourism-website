@@ -13,12 +13,12 @@ const Tech = ({ data }) => {
             </div>
             <img
                src={require(`../../images/technology/${portraitImage}`)}
-               alt=""
+               alt={name}
                className="tech__image tech__image_type_portrait"
             />
             <img
                src={require(`../../images/technology/${landscapeImage}`)}
-               alt=""
+               alt={name}
                className="tech__image tech__image_type_landscape"
             />
          </div>

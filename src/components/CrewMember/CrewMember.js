@@ -12,7 +12,7 @@ const CrewMember = ({ data }) => {
          </div>
          <img
             src={require(`../../images/crew/${image}`)}
-            alt=""
+            alt={profession}
             className="crewMember__image"
          />
       </section>

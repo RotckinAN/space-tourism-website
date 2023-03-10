@@ -8,7 +8,7 @@ const Planet = ({ data }) => {
          <div className="planet__container">
             <img
                src={require(`../../images/destination/${image}`)}
-               alt=""
+               alt={subtitle}
                className="planet__planetImage"
             />
             <div className="planet__textContainer">

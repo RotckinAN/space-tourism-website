@@ -21,7 +21,7 @@ const Header = () => {
 
    return (
       <header className="header">
-         <Link to={'/'} className="header__linkLogo">
+         <Link to={'/'} className="header__linkLogo" aria-label="mainPage">
             <div className="header__logo"></div>
          </Link>
          <nav className="header__navigate">
