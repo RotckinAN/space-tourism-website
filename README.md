@@ -5,7 +5,7 @@
 ## Welcome! 👋
 
 Приложение выполнено в рамках челенджа проекта [Frontend Mentor](https://www.frontendmentor.io/?ref=challenge) ***"Space tourism multi-page website"***. <br/>
-Готовый вариант приложения расположен [здесь](https://rotckinan.github.io/space-tourism-website/).
+С готовым вариантом приложения можно ознакомиться [здесь](https://rotckinan.github.io/space-tourism-website/).
 
 
 ### Функциональность.
